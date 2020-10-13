@@ -45,5 +45,5 @@ module.exports.comparePass = function(passFromUser, userDBPass, callback) {
   bcrypt.compare(passFromUser, userDBPass, (err, isMatch) => {
     if(err) throw err;
     callback(null, isMatch);
-  });   //compare функция для сравнения паролей
+  });   
 };
