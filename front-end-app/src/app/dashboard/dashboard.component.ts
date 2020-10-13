@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { Router } from '@angular/router';  //переадресация на стр пользователя
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-dashboard',
