@@ -20,7 +20,7 @@ import { HttpModule} from '@angular/http';
 
 import { IsLoggedIn } from './isLogged.guard';
 
-const appRoute: Routes = [    //список адресов которые будем отслеживать
+const appRoute: Routes = [    
   {path: '', component: HomeComponent},
   {path: 'reg', component: RegComponent},
   {path: 'auth', component: AuthComponent},
