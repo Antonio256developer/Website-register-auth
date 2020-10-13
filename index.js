@@ -9,11 +9,9 @@ const account = require('./routes/account');
 
 const node = express();
 
-//const port = 3000;
-
 const port = process.env.PORT || 8080;
 
-node.use(passport.initialize());  //иниц библ
+node.use(passport.initialize());  
 node.use(passport.session());
 
 require('./config/passport')(passport);
