@@ -7,7 +7,6 @@ export class CheckFormService {
 
   constructor() { }
 
-//проверки полей формы, если значение пусто, то фолс, если написано тру
   checkName(name) {
     if (name == undefined)
       return false;
