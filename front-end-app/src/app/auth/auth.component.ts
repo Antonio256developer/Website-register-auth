@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { Router } from '@angular/router';  //переадресация на стр пользователя
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-auth',
@@ -23,7 +23,7 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  userLoginClick() {     //ф-ция будет срабатывать при нажатии на кнопку войти в кабинет
+  userLoginClick() {    
     const user = {
       login: this.login,
       password: this.password
