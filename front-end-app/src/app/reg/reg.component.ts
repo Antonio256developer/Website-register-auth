@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CheckFormService } from '../check-form.service';
 import { AuthService } from '../auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { Router } from '@angular/router';  //переадресация на стр пользователя
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-reg',
@@ -28,14 +28,13 @@ export class RegComponent implements OnInit {
   ngOnInit(): void {
   }
 
-userRegisterClick() {      //реакция кнопки зарегистрироваться при заполнении формы
+userRegisterClick() {      
   const user = {
     name: this.name,
     email: this.email,
     login: this.login,
     password: this.password
-  };  //страничка не перезагрузится после нажатия зарегистрироваться
-//проверки заполнения полей формы
+  };    
   if(!this.checkForm.checkName(user.name)) {
     this.flashMessages.show("Имя пользователя не введено",{
       cssClass: 'alert-danger',
@@ -61,7 +60,6 @@ userRegisterClick() {      //реакция кнопки зарегистрир�
     });
     return false;
   }
-  //после проверок выше, если все положительно, регистрируем его
 
   this.authService.registerUser(user).subscribe(data => {
     if(!data.success) {
