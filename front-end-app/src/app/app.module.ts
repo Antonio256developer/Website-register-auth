@@ -48,4 +48,5 @@ const appRoute: Routes = [
   providers: [CheckFormService, AuthService, IsLoggedIn],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
